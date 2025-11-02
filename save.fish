@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 set -l URL $argv[1]
-set -l DIR (pwd)/saved
+set -l DIR (dirname (realpath (status --current-filename)))/saved
 
 set -l SCRIPT_DIR (dirname (realpath (status --current-filename)))
 set -l SCRUB_SCRIPT_PATH "$SCRIPT_DIR/scrub.py"
